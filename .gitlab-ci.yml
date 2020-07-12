@@ -1,0 +1,12 @@
+image: blang/latex
+
+build:
+  script:
+    - pdflatex algorithm.tex
+    - biber algorithm
+    - pdflatex algorithm.tex
+    - pdflatex algorithm.tex
+    - pdflatex algorithm.tex
+  artifacts:
+    paths:
+      - "*.pdf"
