@@ -1,0 +1,8 @@
+image: blang/latex
+
+build:
+  script:
+    - latexmk -jobname=ci-algorithm -pdf algorithm.tex
+  artifacts:
+    paths:
+      - "ci-algorithm.pdf"
