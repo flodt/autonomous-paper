@@ -50,7 +50,7 @@
 \titlerunning{Ethik des autonomen Fahrens}
 \authorrunning{Florian Schmidt}
 \affil[1]{Fakultät für Informatik, Technische Universität München (TUM),
-  Boltzmannstr. 3, 85748 Garching, Germany}
+  Boltzmannstr. 3, 85748 Garching, Deutschland}
 \email{fs.schmidt@tum.de}
 \date{\today}
 
@@ -134,13 +134,49 @@ Dieses berührt alle drei der im vorigen Abschnitt aufgeführten Kernfragen, und
 Wir haben als Gesellschaft viel Berührung mit den Überlegungen, die auf den kommenden Seiten folgen werden.
 Gerade durch die Möglichkeiten einer zukünftig durch hochautomatisierte Fahrzeuge befahrene Innenstadt sprechen wir eben nicht von weit entfernten militärischen Operationen, sondern vom alltäglichen Straßenverkehr.
 
-Die Motivation der rein technischen Entwicklung ist nach einem kurzen Blick in die Verkehrsunfallstatistik auf deutschen Straßen relativ klar erkenntlich.
+Die Motivation der technischen Entwicklung ist nach einem kurzen Blick in die Verkehrsunfallstatistik auf deutschen Straßen relativ klar erkenntlich.
 
-% todo Unfallstatistik
+Von den in 2018 ca. 2,5 Millionen polizeilich erfassten Verkehrsunfällen fußten ca. $88,4 \,\%$ maßgeblich auf dem Fehlverhalten der involvierten Fahrzeugführer (aus \cite{kba-zulass}, \cite{destatis-grafik}, \cite{destatis-unfallaktuell}).
+Das zeigt deutlich: der Faktor Mensch verschwindet vorerst nicht aus dem Straßenverkehr.
+Immer und überall da, wo der Mensch beim Fahren konkrete Aktionen durchführt -- sei es Überholen, Einfädeln oder Abbiegen -- werden Fehler passieren.
+Aus diesem Grund helfen seit geraumer Zeit diverse Assistenzsysteme im Fahrzeug mit.
+Diese tragen maßgeblich zu der bis dato utopischen Vorstellung bei, dass wir mit deren Hilfe effizienter, eleganter und entspannter unterwegs sein werden.
+Dazu müssen die Systeme ja nicht perfekt fahren -- sie müssen lediglich statistisch besser (und sicherer) fahren als wir.
+
 
 \section{Technische Automatisierungsstufen nach der SAE}
-\subsection{Motivation der Konkretisierung}
+\begin{figure*}
+	\includegraphics[width=\textwidth]{media/sae-levels-image}
+	\caption{Die Automatisierungsstufen nach SAE-Standard J3016 (aus \cite{sae-levels-image}).}
+	\label{fig:sae-levels-img}
+\end{figure*}
+
+Zur Konkretisierung wird die technische Entwicklung an dieser Stelle in der Regel in sechs spezifische Automatisierungsstufen (auch \emph{Levels}) aufgeteilt \cite{sae-levels}, \cite{bast-levels}.
+Diese stellen aufsteigend das Fortschreiten von vollständig manuellem Fahren bis hin zur vollständigen Autonomie des Fahrzeugs dar.
+
+Die Idee hinter einer derartigen Klassifizierung ist, dass hierdurch die Klärung der anfallenden rechtlichen und verantwortungstechnischen Fragen einfacher fällt.
+Es lässt sich nun sehr einfach sagen, ab welchem Punkt die Maschine hier vorrangig die Verantwortung für ihr eigenes Handeln trägt -- eine Information, die in (straf-)rechtlichem Kontext durchaus wertvoll sein kann.
+
+
 \subsection{Levels 0--2: menschlich gelenktes Fahren}
+\begin{description}
+	\item[Level 0.] Die überwiegende Mehrheit der Fahrzeuge auf deutschen Straßen ist mit der Automatisierungsstufe 0 unterwegs: als Selbstfahrer, bzw. \glqq Driver only\grqq{}.
+	Hier übernimmt ganz klassisch der menschliche Fahrer alle Aspekte der Fahraufgabe\footnote{Was nicht bedeutet, dass keine technischen Features vorhanden sein können -- diese haben dann allerdings lediglich nur informierende oder isoliert eingreifende Wirkung.}, und ist dementsprechend natürlich auch vollständig für sein eigenes Handeln verantwortlich.
+	
+	
+	\item[Level 1.] Viele moderne Neuwagen bewegen sich nun mindestens auf dem Gebiet der Automatisierungsstufe 1, indem sie ihrem Fahrer bestimmte unterstützende und vor allem auf der Langstrecke der Ermüdung entgegenwirkende Assistenzsysteme anbieten.
+	Dies kann beispielsweise ein adaptiver Tempomat sein, welcher im Kontrast zu einem regulären nichtadaptiven Tempomaten die eingestellte Geschwindigkeit unterschreitet, um den eingestellten Sicherheitsabstand zum vorausfahrenden Fahrzeug zu halten.
+	Auch Spurwechselassistenten im Sinne von Totwinkelwarnern und Spurhalteassistenten mit der Möglichkeit zu einem korrigierenden, aber isolierten Lenkeingriff stellen hier wertvolle Fahrhilfen dar.
+	Eine Fahrhilfe ist allerdings genau das, was diese Systeme bieten: eine Hilfe beim Fahren für den eigentlichen Fahrer. Der Mensch fährt immer noch selbst und muss demnach bei der Verwendung der Systeme dauerhaft wachsam bleiben und jederzeit zur vollständigen und sofortigen Übernahme der Steuerung bereit sein.
+	Somit liegt auch hier wie bei Level-0-Fahrzeugen die Verantwortung für Fahrhandlungen eindeutig beim Fahrzeugführer.
+	
+	
+	\item[Level 2.] Hier geht's weiter\ldots %todo
+\end{description}
+
+
+
+
 \subsection{Levels 3--5: technisch gelenktes Fahren}
 
 \section{Unfallprävention und Unfallfolgenminimierung}
