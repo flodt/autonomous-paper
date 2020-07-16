@@ -21,7 +21,7 @@
 \CatchFileDef{\commit}{.git/refs/heads/\branch}{}
 
 % header info
-\fancyhead[C]{{\color{red} draft version above \commit on \branch}}
+\fancyhead[C]{{\color{red} draft above \commit on \branch}}
 
 \title{{\color{TUMBlau} Maschinen- und Roboterethik:} {\color{red} (draft)}\\Die komplexe Ethik autonomer Kraftfahrzeuge}
 \author{Florian Schmidt\authormark{1, \,\Letter}}
@@ -148,6 +148,7 @@ Im Folgenden möchten wir auf diese Automatisierungsstufen genauer eingehen (nac
 	Konkret geht es hierbei darum, dass die Technik jeweils ausschließlich entweder die Quer-, oder die Längssteuerung des Fahrzeugs übernehmen kann -- aber nicht beides gleichzeitig.
 	Auch Spurwechselassistenten im Sinne von Totwinkelwarnern und Spurhalteassistenten mit der Möglichkeit zu einem korrigierenden, aber isolierten Lenkeingriff stellen hier also wertvolle Fahrhilfen dar.
 	Eine Fahrhilfe ist allerdings genau das, was diese Systeme bieten: eine Hilfe beim Fahren für den eigentlichen Fahrer.
+	
 	Der Mensch fährt immer noch selbst und muss demnach bei der Verwendung der Systeme dauerhaft wachsam bleiben und jederzeit zur vollständigen und sofortigen Übernahme der Steuerung bereit sein.
 	Somit liegt auch hier wie bei Level-0-Fahrzeugen die Verantwortung für Fahrhandlungen eindeutig beim Fahrzeugführer.
 	
@@ -158,10 +159,19 @@ Im Folgenden möchten wir auf diese Automatisierungsstufen genauer eingehen (nac
 	Diese Fahrzeuge sind gemäß der Spezifikation im SAE-Standard in der Lage, im Gegensatz zum Level 1 nun sowohl die Längs-, als auch die Querlenkung gleichzeitig zu übernehmen.
 	Das System muss zwar vom Fahrer noch überwacht werden, kann allerdings in bestimmten Fahrsituationen (beispielsweise auf der Autobahn) das Fahrzeug eben autonom in der Spur halten und auch Gas und Bremse selbstständig bedienen~\cite[S. 1]{bast-levels}.
 	Dies geschieht durch eine Mischung aus Kameradaten, lokaler Sensorik und GPS-basierten Kartendaten aus dem Navigationssystem.
+	
 	Darüber hinaus kann es bedingt durch die künstlich-intelligente Struktur der Programmierung während der Fahrt aus seinen eigenen Fehlern lernen und mit der Zeit bessere Fahrverhalten entwickeln.
 	Begegnet das System allerdings einer Fahrsituation, mit der es nicht selbstständig umgehen kann, muss es die Steuerung sofort und ohne Verzögerung vollständig an den menschlichen Fahrer abgeben können.
+	
 	Somit steht auch hier der Fahrer bei allen Fahrsituationen oder im Falle eines Unfalls in der Verantwortung über die Aktionen des teilautonomen Fahrzeugs, und muss im Falle einer rechtswidrigen oder gefährlichen Situation unbedingt eingreifen.
 \end{description}
+
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{media/tesla-ap-dash}
+	\caption{Ein autonom fahrender Tesla Model 3 auf einem US-amerikanischen Highway~\cite{tesla-ap-dash}.}
+	\label{fig:tesla-autonomous}
+\end{figure}
 
 
 \subsection{Levels 3--5: technisch gelenktes Fahren}
@@ -170,12 +180,46 @@ Ab hier bewegen wir uns nämlich in Gebieten, in denen das Fahrzeug zumindest st
 
 \begin{description}
 	\item[Level 3.] Ab hier übernimmt das autonome System nämlich in konkret abgesteckten Fahrsituationen komplett die Beobachtung der Umgebung sowie die angemessene Reaktion auf äußere Impulse.
+	
+	Dabei kennt das System seine eigenen Grenzen und muss in der Lage sein, bei jeder auftretenden Situation risikominimierend zu wirken~\cite[S. 1]{bast-levels}.
+	Der menschliche Fahrer muss zwar noch im Fahrzeug anwesend sein und in einem angemessenen Zeitraum auf eine eventuelle Anfrage des Fahrzeugs zur Übernahme der Steuerung eingehen~\cite[S. 8]{cedr-levels}, entzieht sich allerdings innerhalb der Funktionsgrenzen des Systems vollständig der Verantwortung.
+	
+	Als anschauliches Beispiel können wir hierzu den sogenannten \emph{Staupiloten} im Audi A8 heranziehen.
+	Dieser kann, so zumindest die Spezifikation, auf Autobahnen im Stau oder bei Kolonnenverkehr mit Geschwindigkeiten unter 60 km/h vollständig das Steuer übernehmen.
+	Bemerkenswert ist hier demnach, dass der Fahrer somit seine Verantwortung an Audi abgibt: er kann die Hände dauerhaft vom Lenkrad und die Füße von den Pedalen nehmen und sich einer anderen Beschäftigung widmen.
+	Soweit leider zumindest nur die Theorie -- hier war die technologische Entwicklung schneller als die Gesetzgebung in Europa: nachdem die Zulassung für Fahrzeuge dieser Klasse bis heute nicht in Aussicht steht, hat der Fahrzeughersteller aus Ingolstadt die Pläne für das System nun gestrichen~\cite{audi-no-more-staupilot} -- das Prinzip steht allerdings natürlich trotzdem.
+	
+	\item[Level 4, Level 5.] Die folgenden beiden höchsten Automatisierungsstufen 4 und 5 stellen die restliche Übernahme der Fahrerrolle durch die Technik dar:
+	bei Level 4 muss noch ein Fahrer anwesend sein, der in nicht-definierten Fahrsituationen -- also bei Level 3 der Regelfall, hier der Ausnahmefall -- übernehmen kann, während Level 5 die vollständige Autonomie darstellt, in der das Auto selbst die kompletten Fähigkeiten eines menschlichen Fahrers ersetzt und, so weit die Theorie, auch leer und vollkommen eigenständig fahren kann~\cite[S. 8]{cedr-levels}.
 \end{description}
 
 
 \section{Unfallprävention und Unfallfolgenminimierung}
+Spätestens hier eröffnen sich allerdings eine schwierige ethische Dilemmas, die so beim menschlichen Fahren aufgrund der unterschiedlichen Natur des menschlichen beziehungsweise maschinellen Treffens von Entscheidungen nicht auftreten können.
+
+Weiterhin ist klar: auch bei der Prävalenz von autonomen Fahrzeugen auf den Straßen sind Unfallsituationen unausweichlich.
+
+Der Unfallfaktor Mensch wird in naher Zukunft auch bei einem Popularitätszuwachs der autonomen Fahrzeuge nicht verschwinden, da sich auf einen nicht absehbaren Zeitraum menschliche und elektronische Fahrer die Straße teilen werden (auch \glqq gemischter Verkehr\grqq{} genannt)~\cite[S. 1278]{nyholm-ethics}.
+
+In einer idealen, rein autonomen Fahrwelt ist die Unfallprävention nur bei Systemfehlfunktionen relevant, da Maschinen bei fehlerfreier Programmierung intrinisch fehlerfrei handeln.
+Von Maschine zu Maschine ist eine Kommunikation der Fahrzeuge untereinander durchaus denkbar und zum kooperativen Informationsaustausch auch in Zukunft angedacht; das noch menschlich gefahrene Auto ist allerdings für das elektronische System immer eine Komponente voller Überraschungen, die selbst fortgeschrittene prediktive Algorithmen nicht umfassend umreißen können.
+
+
 \subsection{Strategien in Systemgrenzbereichen}
+In den funktionalen Grenzbereichen der aktuellen, teilautonomen Systeme besteht die Vorgehensweise zur Gefahrenminimierung beziehungsweise Unfallvermeidung fast immer in der Kontrollübergabe an den zwangsweise noch vorhandenen menschlichen Fahrer, welcher anschließend durch seine Erfahrung und seinen Instinkt die Situation entschärfen kann.
+
+Problematisch wird dies allerdings, sobald man sich in höhere Automatisierungsniveaus bewegt:
+Selbst wenn noch ein menschlicher Fahrer im Auto vorhanden ist, ist die Übergabe im Falle einer gefährlichen Situation oder gar eines Unfalls oft nicht rechtzeitig möglich und die Reaktionszeit eines vorher völlig rechtmäßigerweise abgelenkten Fahrers viel zu hoch, um hier präventiv zu wirken.
+Darüber hinaus stellt sich spätestens in Level-5-Fahrzeugen ein menschliches Eingreifen mangels Lenkrad und Pedalen als eher diffizil heraus.
+
+Daher ist eines klar: das Fahrzeug muss wissen, wie es sich im Falle des Unfalls zu verhalten hat.
+Unfallvermeidung ist aufgrund der Einzigartigkeit der Situationen speziell im menschlich-mechanisch gemischten Verkehr nicht immer möglich und Unfallfolgenminimierung setzt konkrete Handlungen voraus~\cite[S. 71]{maurer-autonomous}.
+
+
 \subsection{Reaktionen vs. aktive Entscheidungen}
+% this is not present in the old one
+
+
 \subsection{Deterministische Perspektiven}
 
 \section{Typische Abwägungsszenarien}
