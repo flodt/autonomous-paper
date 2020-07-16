@@ -124,7 +124,7 @@ Die Disziplin stellt sich im Prinzip drei Kernfragen, die maßgeblich die Überl
 	\item \textbf{In welcher Form trägt die Maschine Verantwortung über ihr Handeln?}
 
 	Unklar ist ebenfalls, inwieweit eine Maschine retrospektiv für eine getroffene Entscheidung oder durchgeführte Handlung zur Rechenschaft gezogen werden kann.
-	Zur Illustration sei die folgende Frage gestellt: Bis wir zu vollständig selbstlernenden Maschinen gekommen sind, sind auch die fortschrittlichsten Computer in gewisser Weise an ihre Algorithmik oder ihre Trainingsdatenmenge gebunden; kann man hier von Verantwortung sprechen?
+	Zur Illustration sei die folgende Frage gestellt: Bis wir zu vollständig selbstlernenden Maschinen gekommen sind, sind auch die fortschrittlichsten Computer in gewisser Weise an ihre Algorithmik oder ihre Trainingsdatenmenge gebunden; Kann man hier von Verantwortung sprechen?
 \end{enumerate}
 
 
@@ -151,33 +151,49 @@ Dazu müssen die Systeme ja nicht perfekt fahren -- sie müssen lediglich statis
 	\label{fig:sae-levels-img}
 \end{figure*}
 
-Zur Konkretisierung wird die technische Entwicklung an dieser Stelle in der Regel in sechs spezifische Automatisierungsstufen (auch \emph{Levels}) aufgeteilt~\cite{sae-levels},~\cite{bast-levels}.
+Zur Konkretisierung wird die technische Entwicklung an dieser Stelle in der Regel in sechs spezifische Automatisierungsstufen (auch \emph{Levels}) aufgeteilt.
 Diese stellen aufsteigend das Fortschreiten von vollständig manuellem Fahren bis hin zur vollständigen Autonomie des Fahrzeugs dar.
 
 Die Idee hinter einer derartigen Klassifizierung ist, dass hierdurch die Klärung der anfallenden rechtlichen und verantwortungstechnischen Fragen einfacher fällt.
 Es lässt sich nun sehr einfach sagen, ab welchem Punkt die Maschine hier vorrangig die Verantwortung für ihr eigenes Handeln trägt -- eine Information, die in (straf-)rechtlichem Kontext durchaus wertvoll sein kann.
 
+Im Folgenden möchten wir auf diese Automatisierungsstufen genauer eingehen (nach~\cite{sae-levels},~\cite{bast-levels}).
 
 \subsection{Levels 0--2: menschlich gelenktes Fahren}
 \begin{description}
 	\item[Level 0.] Die überwiegende Mehrheit der Fahrzeuge auf deutschen Straßen ist mit der Automatisierungsstufe 0 unterwegs: als Selbstfahrer, bzw. \glqq Driver only\grqq{}.
-	Hier übernimmt ganz klassisch der menschliche Fahrer alle Aspekte der Fahraufgabe\footnote{Was nicht bedeutet, dass keine technischen Features vorhanden sein können -- diese haben dann allerdings lediglich nur informierende oder isoliert eingreifende Wirkung.}, und ist dementsprechend natürlich auch vollständig für sein eigenes Handeln verantwortlich.
+	Hier übernimmt ganz klassisch der menschliche Fahrer alle Aspekte der Fahraufgabe\footnote{Was nicht bedeutet, dass keine technischen Features vorhanden sein können -- diese haben dann allerdings lediglich nur informierende oder isoliert eingreifende Wirkungen.}, und ist dementsprechend natürlich auch vollständig für sein eigenes Handeln verantwortlich.
 	
 	
 	\item[Level 1.] Viele moderne Neuwagen bewegen sich nun mindestens auf dem Gebiet der Automatisierungsstufe 1, indem sie ihrem Fahrer bestimmte unterstützende und vor allem auf der Langstrecke der Ermüdung entgegenwirkende Assistenzsysteme anbieten.
 	Dies kann beispielsweise ein adaptiver Tempomat sein, welcher im Kontrast zu einem regulären nichtadaptiven Tempomaten die eingestellte Geschwindigkeit unterschreitet, um den eingestellten Sicherheitsabstand zum vorausfahrenden Fahrzeug zu halten.
-	Auch Spurwechselassistenten im Sinne von Totwinkelwarnern und Spurhalteassistenten mit der Möglichkeit zu einem korrigierenden, aber isolierten Lenkeingriff stellen hier wertvolle Fahrhilfen dar.
-	Eine Fahrhilfe ist allerdings genau das, was diese Systeme bieten: eine Hilfe beim Fahren für den eigentlichen Fahrer. Der Mensch fährt immer noch selbst und muss demnach bei der Verwendung der Systeme dauerhaft wachsam bleiben und jederzeit zur vollständigen und sofortigen Übernahme der Steuerung bereit sein.
+	Konkret geht es hierbei darum, dass die Technik jeweils ausschließlich entweder die Quer-, oder die Längssteuerung des Fahrzeugs übernehmen kann -- aber nicht beides gleichzeitig.
+	Auch Spurwechselassistenten im Sinne von Totwinkelwarnern und Spurhalteassistenten mit der Möglichkeit zu einem korrigierenden, aber isolierten Lenkeingriff stellen hier also wertvolle Fahrhilfen dar.
+	Eine Fahrhilfe ist allerdings genau das, was diese Systeme bieten: eine Hilfe beim Fahren für den eigentlichen Fahrer.
+	Der Mensch fährt immer noch selbst und muss demnach bei der Verwendung der Systeme dauerhaft wachsam bleiben und jederzeit zur vollständigen und sofortigen Übernahme der Steuerung bereit sein.
 	Somit liegt auch hier wie bei Level-0-Fahrzeugen die Verantwortung für Fahrhandlungen eindeutig beim Fahrzeugführer.
 	
 	
-	\item[Level 2.] Hier geht's weiter\ldots %todo
+	\item[Level 2.] Als Beispiele für Fahrzeuge der Automatisierungsstufe 2 können sehr anschaulich die Fahrzeuge der Firma \emph{Tesla Motors} dienen.
+	Diese sind mit dem \emph{Autopiloten} ausgestattet, der alle Level 2-Features anschaulich demonstriert~\cite{tesla-ap}:
+	
+	Diese Fahrzeuge sind gemäß der Spezifikation im SAE-Standard in der Lage, im Gegensatz zum Level 1 nun sowohl die Längs-, als auch die Querlenkung gleichzeitig zu übernehmen.
+	Das System muss zwar vom Fahrer noch überwacht werden, kann allerdings in bestimmten Fahrsituationen (beispielsweise auf der Autobahn) das Fahrzeug eben autonom in der Spur halten und auch Gas und Bremse selbstständig bedienen~\cite[S. 1]{bast-levels}.
+	Dies geschieht durch eine Mischung aus Kameradaten, lokaler Sensorik und GPS-basierten Kartendaten aus dem Navigationssystem.
+	Darüber hinaus kann es bedingt durch die künstlich-intelligente Struktur der Programmierung während der Fahrt aus seinen eigenen Fehlern lernen und mit der Zeit bessere Fahrverhalten entwickeln.
+	Begegnet das System allerdings einer Fahrsituation, mit der es nicht selbstständig umgehen kann, muss es die Steuerung sofort und ohne Verzögerung vollständig an den menschlichen Fahrer abgeben können.
+	Somit steht auch hier der Fahrer bei allen Fahrsituationen oder im Falle eines Unfalls in der Verantwortung über die Aktionen des teilautonomen Fahrzeugs, und muss im Falle einer rechtswidrigen oder gefährlichen Situation unbedingt eingreifen.
 \end{description}
 
 
-
-
 \subsection{Levels 3--5: technisch gelenktes Fahren}
+Aus ethischer Sicht interessant wird die Betrachtung allerdings erst richtig ab der nächsthöheren Automatisierungsstufe 3.
+Ab hier bewegen wir uns nämlich in Gebieten, in denen das Fahrzeug zumindest streckenweise die Verantwortung für sein eigenes Handeln übernehmen muss.
+
+\begin{description}
+	\item[Level 3.] Ab hier übernimmt das autonome System nämlich in konkret abgesteckten Fahrsituationen komplett die Beobachtung der Umgebung sowie die angemessene Reaktion auf äußere Impulse.
+\end{description}
+
 
 \section{Unfallprävention und Unfallfolgenminimierung}
 \subsection{Strategien in Systemgrenzbereichen}
