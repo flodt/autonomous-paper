@@ -7,45 +7,23 @@
 \usepackage{lettrine}
 \usepackage{datetime}
 \usepackage[ngerman]{varioref}
+\usepackage{xstring}
+\usepackage{catchfile}
 %\usepackage{microtype} maybe
 
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \bibliography{literature_link.bib}
 
-% versioning
-\makeatletter
-\def\set@docident{%
-  \begingroup
-    % yes, a big \ifcase would be more straightforward;
-    % no, that wouldn't be any fun at all
-    % (also it ends up looking messy and even tricksier).
-    \def\@step##1##2\@nil{\advance\@tempcnta##1 \def\@tempa{##2}}
-    \def\@tempa{{31}{28}{31}{30}{31}{30}{31}{31}{30}{31}{30}{31}}%
-    \@tempcnta=\day             % day of month
-    \@tempcntb=\month           % month of year (unit-offset)
-    \loop
-      \advance\@tempcntb-1
-      \ifnum \@tempcntb>0
-        \expandafter\@step\@tempa\@nil
-    \repeat
-    \@tempcntb=\year            % yes, do calculate leap years
-    \divide\@tempcntb 4 \multiply\@tempcntb 4
-    \ifnum\@tempcntb=\year
-      \ifnum\month>2            % but let's not worry about century years (slack...)
-        \advance\@tempcnta 1
-      \fi
-    \fi
-    \xdef\docident{%
-      \the\@tempcnta            % day-of-year
-      -\the\time}               % minutes since midnight
-  \endgroup
-}
-\set@docident
-\makeatother
+% git commit id
+\CatchFileDef{\headfull}{.git/HEAD}{}
+\StrGobbleRight{\headfull}{1}[\head]
+\StrBehind[2]{\head}{/}[\branch]
+\CatchFileDef{\commit}{.git/refs/heads/\branch}{}
 
-\fancyhead[C]{{\color{red} draft version \docident}}
+% header info
+\fancyhead[C]{{\color{red} draft version above \commit on \branch}}
 
-\title{{\color{TUMBlau} Maschinen- und Roboterethik:} {\color{red} (draft version \docident)}\\Die komplexe Ethik autonomer Kraftfahrzeuge}
+\title{{\color{TUMBlau} Maschinen- und Roboterethik:} {\color{red} (draft)}\\Die komplexe Ethik autonomer Kraftfahrzeuge}
 \author{Florian Schmidt\authormark{1, \,\Letter}}
 \titlerunning{Ethik des autonomen Fahrens}
 \authorrunning{Florian Schmidt}
