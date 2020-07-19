@@ -10,7 +10,12 @@
 \usepackage{xstring}
 \usepackage{catchfile}
 \usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{hyperref}
 %\usepackage{microtype} maybe
+
+% refactor this...
+\hypersetup{draft}
 
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \bibliography{literature_link.bib}
@@ -244,20 +249,64 @@ Das wiederum stellt uns allerdings vor Situationen, die dem klassischen Trolley-
 
 
 \section{Typische Abwägungsszenarien}
-
-
-
-
+Im Folgenden möchten wir uns exemplarisch mit manchen der angesprochenen dilemmatischen Situationen beschäftigen, um ein Gefühl für die offenstehende Problematik zu erlangen.
 
 
 \subsection{Die Parallele zum Trolley-Problem}
+\begin{figure*}
+	\centering
+	\begin{subfigure}[t]{0.35\paperwidth}
+		\centering
+		\includegraphics[width=\textwidth]{media/trolley-img-with}
+		\caption{Das klassische Trolley-Problem.}
+	\end{subfigure}
+	~
+	\begin{subfigure}[t]{0.35\paperwidth}
+		\centering
+		\includegraphics[width=\textwidth]{media/trolley-img-without}
+		\caption{Das Trolley-Problem im autonomen Fahren.}
+	\end{subfigure}
+	\caption{Die Parallele zum klassischen Trolley-Problem im autonomen Fahren~(aus und nach \cite{trolley-img-clean}).}
+	\label{fig:trolley-autonomous}
+\end{figure*}
+
+Das Trolley-Problem selbst ist ein bekanntes Gedankenexperiment, das als Anwendungsbeispiel für ethische Theorien genutzt wird.
+
+Es handelt von einem Straßenbahnwagen, der ohne funktionstüchtige Bremsen auf eine Gruppe von fünf Menschen zurollt.
+Bevor dieser allerdings die Menschengruppe erreicht, passiert er eine Weiche, an der sich ein Weichensteller befindet.
+Die Weiche könnte den Bahnwagen auf ein weiteres Gleis umleiten, auf dem sich allerdings auch eine Person befindet.
+Alle Menschen schaffen es nicht mehr rechtzeitig, den Gleisbereich vor Aufprall des Wagens zu verlassen und die Kollision endet mit Sicherheit für alle Verwickelten tödlich.
+
+\textit{Sollte der Weichensteller die Weiche umstellen?}
+
+Durch die Nichtaktion beziehungsweise Unterlassung des Weichenstellers würden fünf Menschen ihr Leben verlieren; durch das Handeln des Weichenstellers involviert er sich in die Situation und rettet die fünf Personen, allerdings nur auf Kosten des Lebens der einen Person auf dem zweiten Gleis.
+
+Der oben erwähnte utilitaristische Ansatz hätte hier klar das Handeln des Weichenstellers zur Folge (also das Umstellen der Weiche und dadurch bedingt den Tod der auf dem zweiten Gleis befindlichen Person), da utilitaristisch abgewägt der Schaden des fünffachen Todes schwerwiegender ist als der des einfachen Todes.
+
+Gleichzeitig könnte auch die moralische Gewichtung der Handlung des Weichenstellens und somit der Tötung der einen Person mit der Unterlassung, also einem passiven \glqq Sterben lassen\grqq{} von fünf Personen abgewägt werden.
+
+Ähnliche Situationen und ethische Dilemmata tauchen also auch bei der Programmierung der Spezialfälle in der Verkehrsunfallbehandlung auf, dort aber mit sehr zentralen Differenzierung, die die Parallele zum Trolley-Problem etwas abschwächt:
+Die ethisch relevanten Entscheidungen werden \textit{nicht in Echtzeit} getroffen. Gerade deshalb ist die Situation ethisch so hochinteressant.
+
+Im Trolley-Szenario sowie im gegenwärtigen Straßenverkehr (im Rahmen der bereits angesprochenen instinktiven Unfallreaktionen) müssen in Sekundenbruchteilen Entscheidungen über Leben und Tod aller Beteiligten getroffen werden, was auch im Zweifel die Haftbarkeit des (menschlichen) Entscheidenden zumindest rechtlich ausschließt.
+Anders und vor allem ethisch schwieriger sieht es bei der Wahl der bereits erwähnten Entscheidungsmaximen aus: ein solches Festsetzen von Prinzipien geht zwangsweise mit einer gewissen ethischen Verantwortungsübernahme für ebendiese einher und bedingt das kritische Hinterfragen und besonders die Rechtfertigung der gewählten Maximen.
+
+
 \subsection{Ethische Beispielargumentation}
+% continued here
+
+
+
+
+
+
 \subsection{Versuch generalisierbarer Lösungsansätze}
 \subsection{Die Moral Machine des MIT}
 
 \section{Lösungsansätze der deutschen Ethikkommission}
 
-
+\section{Reflektion der Überlegungen}
+% infos zur Konstruktion der Szenarien, if-else cases in der Software, etc.
 
 \printbibliography
 
