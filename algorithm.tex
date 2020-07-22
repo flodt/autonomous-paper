@@ -11,6 +11,7 @@
 \usepackage{catchfile}
 \usepackage{enumitem}
 \usepackage{subcaption}
+\usepackage[autostyle]{csquotes}
 \usepackage{hyperref}
 %\usepackage{microtype} maybe
 
@@ -19,6 +20,8 @@
 
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \bibliography{literature_copy.bib}
+
+\MakeOuterQuote{"}
 
 % git commit id
 \CatchFileDef{\headfull}{.git/HEAD}{}
@@ -75,7 +78,7 @@ Genauso wie die Maschinenethik an moralischen Maschinen forscht, versucht die Ge
 
 Analog kann man die Differenzierung zwischen der schwachen und starken Eigenschaft von der Forschung zur künstlichen Intelligenz übernehmen.
 Wir sprechen von schwacher maschineller Moral wie schwacher KI, wenn die entsprechende Eigenschaft simuliert oder in Teilen dem Vorbild nachgeahmt wird; erst die starke KI oder starke maschinelle Moral strebt danach, die Eigenschaft vollständig zu erreichen~\cite[S. 17]{bendel-mascheth}.
-Die starke KI stellt hiermit also eine Art \emph{allgemeine} künstliche Intelligenz dar -- spätestens hier sind Überlegungen zur Moral in jedem Fall angebracht\footnote{Offen bleibt natürlich die Frage, ob die menschliche Moral in diesem Kontext das erstrebenswerte Ziel ist. Es kann ebenso Ziel sein, eine Art \glqq Moral\grqq{} zu erzeugen, die sich gänzlich von der des Menschen unterscheidet~\cite[S. 23]{bendel-mascheth}.}.
+Die starke KI stellt hiermit also eine Art \emph{allgemeine} künstliche Intelligenz dar -- spätestens hier sind Überlegungen zur Moral in jedem Fall angebracht\footnote{Offen bleibt natürlich die Frage, ob die menschliche Moral in diesem Kontext das erstrebenswerte Ziel ist. Es kann ebenso Ziel sein, eine Art "Moral" zu erzeugen, die sich gänzlich von der des Menschen unterscheidet~\cite[S. 23]{bendel-mascheth}.}.
 
 Abgegrenzt wird die Maschinenethik in der Regel von den mit ihr verwandten Bereichsethiken
 \begin{itemize}
@@ -98,7 +101,7 @@ Die Disziplin stellt sich im Prinzip drei Kernfragen, die maßgeblich die Überl
 \begin{enumerate}
 	\item \textbf{Wie kommt die Moral in die Maschine?}
 
-	Wie können wir es schaffen, das abstrakte Konzept einer \glqq Moral\grqq{} in ein für Maschinen verständliches Konzept zu verwandeln, inklusive aller Nuancen und Kontextüberlegungen die daraus folgen?
+	Wie können wir es schaffen, das abstrakte Konzept einer "Moral" in ein für Maschinen verständliches Konzept zu verwandeln, inklusive aller Nuancen und Kontextüberlegungen die daraus folgen?
 	
 	\item \textbf{Wie viel Entscheidungsgewalt überlassen wir Maschinen?}
 
@@ -145,7 +148,7 @@ Im Folgenden möchten wir auf diese Automatisierungsstufen genauer eingehen (nac
 
 \subsection{Levels 0--2: menschlich gelenktes Fahren}
 \begin{description}
-	\item[Level 0.] Die überwiegende Mehrheit der Fahrzeuge auf deutschen Straßen ist mit der Automatisierungsstufe 0 unterwegs: als Selbstfahrer, bzw. \glqq Driver only\grqq{}.
+	\item[Level 0.] Die überwiegende Mehrheit der Fahrzeuge auf deutschen Straßen ist mit der Automatisierungsstufe 0 unterwegs: als Selbstfahrer, bzw. "Driver only".
 	Hier übernimmt ganz klassisch der menschliche Fahrer alle Aspekte der Fahraufgabe\footnote{Was nicht bedeutet, dass keine technischen Features vorhanden sein können -- diese haben dann allerdings lediglich nur informierende oder isoliert eingreifende Wirkungen.}, und ist dementsprechend natürlich auch vollständig für sein eigenes Handeln verantwortlich.
 	
 	
@@ -167,7 +170,7 @@ Im Folgenden möchten wir auf diese Automatisierungsstufen genauer eingehen (nac
 	Dies geschieht durch eine Mischung aus Kameradaten, lokaler Sensorik und GPS-basierten Kartendaten aus dem Navigationssystem.
 	
 	Darüber hinaus kann es bedingt durch die künstlich-intelligente Struktur der Programmierung während der Fahrt aus seinen eigenen Fehlern lernen und mit der Zeit bessere Fahrverhalten entwickeln.
-	Begegnet das System allerdings einer Fahrsituation, mit der es nicht selbstständig umgehen kann, muss es die Steuerung sofort und ohne Verzögerung vollständig an den menschlichen Fahrer abgeben können.
+	Begegnet das System allerdings einer Fahrsituation, mit der es nicht selbstständig umgehen kann, muss es die Steuerung sofort und ohne Verzögerung vollständig an den menschlichen Fahrer abgeben können\footnote{Das ist sehr wichtig zu betonen, denn die beim Fahren wahrgenommene vermeintliche Sicherheit einiger Level-2-Systeme ist sicherlich auch für manch nachlässigen Umgang mit ebendenselben verantwortlich.}.
 	
 	Somit steht auch hier der Fahrer bei allen Fahrsituationen oder im Falle eines Unfalls in der Verantwortung über die Aktionen des teilautonomen Fahrzeugs, und muss im Falle einer rechtswidrigen oder gefährlichen Situation unbedingt eingreifen.
 \end{description}
@@ -205,7 +208,7 @@ Spätestens hier eröffnen sich allerdings eine schwierige ethische Dilemmas, di
 
 Weiterhin ist klar: auch bei der Prävalenz von autonomen Fahrzeugen auf den Straßen sind Unfallsituationen unausweichlich.
 
-Der Unfallfaktor Mensch wird in naher Zukunft auch bei einem Popularitätszuwachs der autonomen Fahrzeuge nicht verschwinden, da sich auf einen nicht absehbaren Zeitraum menschliche und elektronische Fahrer die Straße teilen werden (auch \glqq gemischter Verkehr\grqq{} genannt)~\cite[S. 1278]{nyholm-ethics}.
+Der Unfallfaktor Mensch wird in naher Zukunft auch bei einem Popularitätszuwachs der autonomen Fahrzeuge nicht verschwinden, da sich auf einen nicht absehbaren Zeitraum menschliche und elektronische Fahrer die Straße teilen werden (auch "gemischter Verkehr" genannt)~\cite[S. 1278]{nyholm-ethics}.
 
 In einer idealen, rein autonomen Fahrwelt ist die Unfallprävention nur bei Systemfehlfunktionen relevant, da Maschinen bei fehlerfreier Programmierung intrinisch fehlerfrei handeln.
 Von Maschine zu Maschine ist eine Kommunikation der Fahrzeuge untereinander durchaus denkbar und zum kooperativen Informationsaustausch auch in Zukunft angedacht; das noch menschlich gefahrene Auto ist allerdings für das elektronische System immer eine Komponente voller Überraschungen, die selbst fortgeschrittene prediktive Algorithmen nicht umfassend umreißen können.
@@ -237,7 +240,7 @@ Tatsächlich, kann man argumentieren, muss es das sogar, da eine solche Eventual
 
 
 \subsection{Deterministische Perspektiven}
-Das Stichwort \glqq einprogrammiert\grqq{} ist hier allerdings von besonderer Relevanz.
+Das Stichwort "einprogrammiert" ist hier allerdings von besonderer Relevanz.
 Es bedeutet, dass die Entscheidung, die das Fahrzeug in einer bestimmten Situation treffen wird, im Prinzip im Voraus bereits determiniert ist -- vorbestimmt durch genau die Prinzipien, die der Programmierer des Algorithmus dem Fahrzeug zur Bewertung der Situation vorgegeben hat. 
 
 Dies bedingt im Allgemeinen eine fundamental andere Sichtweise auf Verkehrsunfallfolgen, die nicht mehr nur von spontanen Fahrmanövern abhängig sind, sondern konkret im Voraus determiniert werden können \textit{und müssen}.
@@ -277,13 +280,13 @@ Bevor dieser allerdings die Menschengruppe erreicht, passiert er eine Weiche, an
 Die Weiche könnte den Bahnwagen auf ein weiteres Gleis umleiten, auf dem sich allerdings auch eine Person befindet.
 Alle Menschen schaffen es nicht mehr rechtzeitig, den Gleisbereich vor Aufprall des Wagens zu verlassen und die Kollision endet mit Sicherheit für alle Verwickelten tödlich.
 
-\textit{Sollte der Weichensteller die Weiche umstellen?}
+\emph{Sollte der Weichensteller die Weiche umstellen?}
 
 Durch die Nichtaktion beziehungsweise Unterlassung des Weichenstellers würden fünf Menschen ihr Leben verlieren; durch das Handeln des Weichenstellers involviert er sich in die Situation und rettet die fünf Personen, allerdings nur auf Kosten des Lebens der einen Person auf dem zweiten Gleis.
 
 Der oben erwähnte utilitaristische Ansatz hätte hier klar das Handeln des Weichenstellers zur Folge (also das Umstellen der Weiche und dadurch bedingt den Tod der auf dem zweiten Gleis befindlichen Person), da utilitaristisch abgewägt der Schaden des fünffachen Todes schwerwiegender ist als der des einfachen Todes.
 
-Gleichzeitig könnte auch die moralische Gewichtung der Handlung des Weichenstellens und somit der Tötung der einen Person mit der Unterlassung, also einem passiven \glqq Sterben lassen\grqq{} von fünf Personen abgewägt werden.
+Gleichzeitig könnte auch die moralische Gewichtung der Handlung des Weichenstellens und somit der Tötung der einen Person mit der Unterlassung, also einem passiven "Sterben lassen" von fünf Personen abgewägt werden.
 
 Ähnliche Situationen und ethische Dilemmata tauchen also auch bei der Programmierung der Spezialfälle in der Verkehrsunfallbehandlung auf, dort aber mit sehr zentralen Differenzierung, die die Parallele zum Trolley-Problem etwas abschwächt:
 Die ethisch relevanten Entscheidungen werden \textit{nicht in Echtzeit} getroffen. Gerade deshalb ist die Situation ethisch so hochinteressant.
@@ -293,18 +296,72 @@ Anders und vor allem ethisch schwieriger sieht es bei der Wahl der bereits erwä
 
 
 \subsection{Ethische Beispielargumentation}
-% continued here
+\begin{figure}
+	\includegraphics[width=\linewidth]{media/moral-scenario}
+	\caption{Ein gedankenexperimentelles Szenario des autonomen Fahrens, dargestellt von der \emph{Moral Machine}~\cite{moral-machine-web}.}
+	\label{fig:moral-scenario}
+\end{figure}
 
+Im Folgenden wollen wir uns exemplarisch einmal in eine solche gedankenexperimentelle Situation hineinversetzen.
 
+Abbildung \vref{fig:moral-scenario} zeigt eine für die Anwendung der besagten Maximen typische Situation (frei nach~\cite[S. 69f.]{maurer-autonomous} adaptiert):
 
+Nehmen wir an, vor dem autonomen Fahrzeug befinden sich zwei Personen auf der Fahrbahn: ein acht Jahre altes Mädchen und eine achtzig Jahre alte Großmutter.
+Fährt das Fahrzeug unverändert weiter, trifft es beide Personen und die restliche Wegstrecke reicht nicht aus, um das Fahrzeug nennenswert abzubremsen.
+Zudem befinden sich links wie rechts von der Fahrbahn Barrikaden, die auch ein Ausweichen des Fahrzeugs verhindern.
+
+Also steht das autonome Fahrzeug vor der grausamen Wahl, entweder nach links auszuweichen und das junge Mädchen zu überfahren, oder nach rechts und die Großmutter zu überrollen.
+Bedingt durch die Geschwindigkeit und das Gewicht des Fahrzeugs endet der Aufprall für beide Personen mit Sicherheit tödlich.
+
+\emph{Wie trifft man diese Entscheidung?}\footnote{Natürlich sprechen wir hier von konstruierten Szenarien, die speziell so gestaltet sind, sodass sie diese Art von Überlegung provozieren. Dieser Punkt wird in Abschnitt \vref{sec:reflect} erneut aufgegriffen.}
+
+Oder, besser: \emph{Wie gibt man dem Fahrzeug vor, wie es sich in einem solchen Fall zu verhalten hat?}
+
+Nun \emph{könnte} man argumentieren -- und diese Argumente fühlen sich moralisch bereits falsch an --, dass vor dem jungen Mädchen noch ihr ganzes Leben, ihre Familie, ihre Karriere und ihr zukünftiges Glück liegt, während die Großmutter ihr eigenes erfülltes Leben bereits in großen Teilen erleben durfte.
+Dass das Leben der Großmutter natürlich genau so wertvoll ist, wie das des Kindes, ist hoffentlich offensichtlich -- dennoch gäbe es im Rahmen dieser Überlegungen Gründe, wenn auch diese moralisch absolut verwerflich sein mögen, die Diskussion bei einem unvermeidbaren Unfall in die eine oder die andere Richtung zu lenken~\cite[S. 69f.]{maurer-autonomous}.
+
+Ethisch gesehen sind aber beide "Auswahlmöglichkeiten" aber schlicht falsch.
+Ein solches objektifiziertes Abwägen zweier oder mehr Menschenleben geht nicht nur gegen jegliche Natur des menschlichen Moralverständnisses, sondern ist als klarer Verstoß gegen Artikel 1 Absatz 1 des deutschen Grundgesetzes auch rechtlich nicht zulässig.
+
+Des Weiteren geht natürlich eine konkrete Situationsbewertung vor dem Hintergrund einer Klassifizierung zum Finden von allgemeingültigen Lösungen automatisch mit einer Diskriminierung von, beziehungsweise einem Targeting gegen bestimmte Bevölkerungsgruppen einher.
 
 
 \subsection{Versuch generalisierbarer Lösungsansätze}
+Können wir uns nicht ethisch korrekt für einen Pfad entscheiden, bleibt als logische Konsequenz also die Nichtaktion.
+Das Fahrzeug behält den Pfad bei und könnte so beide auf der Fahrbahn befindliche Personen treffen.
+Dass diese Alternative objektiv (beziehungsweise utilitaristisch) gesehen schlimmere Konsequenzen aufweist als die beiden anderen genannten, ist evident~\cite[S. 70]{maurer-autonomous}.
+
+Die übrige Option wäre somit die zufällige, unparteiische und vom Kontext der Situation unbeeinflusste Wahl des Fahrweges, die sozusagen jeder der beiden Personen die gleichen Überlebenschancen zuschreibt.
+Aber selbst das ließe sich als fahrlässig einordnen:
+Die zufällige Auswahl, trotz der Tatsache, dass es Gründe für die Bevorzugung einer der beiden Auswahlmöglichkeiten geben könnte, wenn auch diese moralisch verwerflich sind, wirkt falsch~\cite[S. 71]{maurer-autonomous}.
+
+Eine ethisch und moralisch korrekte Antwort auf das Dilemma zu finden, ist scheinbar nicht möglich.
+
+Dennoch zeigen diese Szenarien anschaulich die aus der Konfrontation mit bis dato unmöglichen Situationen resultierende allgemeine Ratlosigkeit.
+
+In gewisser Weise stellt dies auch einen Appell an die Ethik der nahen Zukunft dar -- im Rahmen der schnelllebigen technologischen Entwicklung des gegenwärtigen Zeitalters sind dies Probleme, die in nicht allzu langer Zeit eine gewissermaßen alltagstaugliche Lösung erwarten.
+
+
 \subsection{Die Moral Machine des MIT}
+Wichtig ist vor allem: Wenn Lösungsansätze gefunden werden sollen, dann muss dies global und gemeinsam als Gesellschaft passieren.
+
+Aus diesem Grund stellte im Jahr 2018 das Massachusetts Institute of Technology (MIT) mit der \emph{Moral Machine}~\cite{moral-machine-web} eine Plattform im Internet auf die Beine, die die Nutzer vor ebendiese ethischen Dilemmasituationen des autonomen Fahrens stellt.
+
+Neben der bildenden Funktion der Internetseite stellte sie weiterhin eine Möglichkeit zur globalen Datensammlung in diesem Kontext dar.
+Hierbei entspringen interessante Tendenzen für manche Auswahlmöglichkeiten, die sich global beobachten lassen -- maßgeblich geht es hierbei um das Verschonen von Menschen vs. Tieren, Passagieren vs. Passanten, älteren vs. jüngeren Menschen, et cetera.
+
+Die im selben Jahr in der \emph{Nature} publizierten Ergebnisse bieten interessante Einblicke in die Moralvorstellungen der Menschen (siehe~\cite[S. 61]{moral-machine}), sowie insbesondere der kulturellen Unterschiede ebenderselben (siehe~\cite[S. 62]{moral-machine}).
+
+% todo eventuell hier noch die Graphiken (slides 34/35) und kurze Analyse
+
 
 \section{Lösungsansätze der deutschen Ethikkommission}
+% continued here...
+
+
 
 \section{Reflektion der Überlegungen}
+\label{sec:reflect}
 % infos zur Konstruktion der Szenarien, if-else cases in der Software, etc.
 
 \printbibliography
