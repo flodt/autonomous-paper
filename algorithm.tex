@@ -14,10 +14,9 @@
 \usepackage[autostyle]{csquotes}
 \usepackage{footmisc}
 \usepackage{hyperref}
-%\usepackage{microtype} maybe
 
-% refactor this...
-\hypersetup{draft}
+% uncomment if TeX splits a verbatim URL in the bibliography
+%\hypersetup{draft}
 
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \bibliography{literature_copy.bib}
@@ -30,7 +29,7 @@
 \StrBehind[2]{\head}{/}[\branch]
 \CatchFileDef{\commit}{.git/refs/heads/\branch}{}
 
-% header info
+% todo: remove header info
 \fancyhead[C]{{\color{red} draft above \commit on \branch}}
 
 \title{{\color{TUMBlau} Maschinen- und Roboterethik:} {\color{red} (draft)}\\Die komplexe Ethik autonomer Kraftfahrzeuge}
